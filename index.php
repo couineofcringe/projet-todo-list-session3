@@ -34,6 +34,7 @@ foreach ($toutes_les_taches as $tache) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Todo List Perso</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="all_variables.css">
@@ -99,7 +100,7 @@ foreach ($toutes_les_taches as $tache) {
                         <small class="task-cat"><?php echo htmlspecialchars($tache['categorie']); ?></small>
                 
                         <div class="task-actions">
-                            <a href="update.php?id=<?php echo $tache['id']; ?>&status=todo" class="btn-action-sec">Return</a>
+                            <a href="update.php?id=<?php echo $tache['id']; ?>&status=todo" class="btn-action-sec">Retour</a>
                             <a href="update.php?id=<?php echo $tache['id']; ?>&status=done" class="btn-action-prim btn-done">Done !</a>
                             <a href="update.php?id=<?php echo $tache['id']; ?>&status=deleted" class="btn-icon-delete" title="Supprimer">
                             <span class="material-icons">delete_outline</span>
