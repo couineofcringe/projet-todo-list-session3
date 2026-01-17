@@ -1,0 +1,245 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: sans-serif; 
+    width: 100%; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(
+        closest-side,
+        #FCA17D, 
+        #DA627D, 
+        #9A348E
+        
+    );
+ }
+ .main-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr; 
+    gap: 2rem;
+    margin-bottom: 3.25rem;
+ }
+.layout-form {
+    align-self: start; 
+    /*si liste de tâches trop longue*/
+    position: sticky;
+    top: 1.25rem;
+}
+
+
+/* FORMULAIRE */
+.form-container { 
+    background: var(--bg-glass-dark); 
+    padding: 1rem; 
+    border-radius: 0.5rem; 
+    backdrop-filter: blur(1rem);
+    box-shadow: var(--card-shadow-dark); 
+}
+label { 
+    display: block; 
+    margin-top: 1rem; 
+    color: var(--label-color);
+}
+input, select, textarea { 
+    width: 100%; 
+    padding: 0.5rem; 
+    margin-top: 0.5rem; 
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: solid 0.1rem var(--input-border);
+}
+/* TABLEAU DE BORD */
+
+/* BOUTONS */
+/* Form (button) */
+button { 
+    margin-top: 1rem; 
+    padding: 0.7rem 1.5rem; 
+    background: var(--bg-button-primary); 
+    color: var(--text-button-primary); 
+    border: solid 0.1rem transparent; 
+    cursor: pointer; 
+    border-radius: 1rem; 
+}
+button:hover { 
+    background: var(--bg-button-primary-hover); 
+    color: var(--text-button-primary-hover);
+    border: solid 0.12rem var(--button-primary-border);
+    box-shadow: var(--card-shadow-dark);
+}
+
+/* Actions tâches ( a ; btn-actions )*/
+.btn-action-prim, .btn-action-sec {
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;     
+}
+.btn-action-prim {
+    color: var(--text-button-primary);
+    border: solid 1px transparent;
+    box-shadow: var(--card-shadow-light);
+}
+.btn-action-prim:hover {
+    background-color: var(--bg-btn-action-hover);
+    box-shadow: var(--card-shadow-light-hover);
+}
+.btn-action-sec {
+    color: var(--text-action-sec);
+    border: solid 1px var(--action-sec-border);
+    background-color: transparent;
+}
+.btn-icon-delete {
+    align-self: center;
+    padding: 0.15rem;
+    border-radius: 0.75rem;
+    color: var(--text-action-sec);
+    border: solid 1px var(--action-sec-border);
+}
+.btn-action-sec:hover, .btn-icon-delete:hover {
+    background-color: var(--bg-secondary);
+    border: solid 1px var(--action-sec-border-hover);
+    box-shadow: var(--card-shadow-dark);
+}
+.btn-go {
+    background-color: var(--bg-btn-go);
+}
+.btn-done {
+    background-color: var(--bg-btn-done);
+}
+.btn-redo {
+    background-color: var(--bg-btn-redo);
+}
+.btn-delete {
+    background-color: var(--bg-btn-delete);
+}
+
+/* Bouton Vider la corbeille (tout vider) */
+.btn-vider {
+    display: inline-flex;
+    align-items: center;
+    background-color: #7C0B2B; 
+    color: var(--text-button-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: background 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-vider:hover {
+    background-color: #3E000C;
+    cursor: pointer;
+}
+/* TEXTE */
+h2, h3 {
+    color: var(--title-main);
+}
+h1 {
+    color: var(--title-secondary);
+}
+strong {
+    color: var(--text-accent);
+}
+.title-muted {
+    color: var(--text-main);
+}
+p {
+    color: var(--text-main);
+}
+.muted {
+    color: var(--text-main);
+}
+/* Liste des tâches */
+h2 { 
+    margin-top: 3rem; 
+    padding-bottom: 0.5rem; 
+}
+.task-card {
+    background: var(--bg-card);
+    border-left: 5px solid var(--task-card-border);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px var(--button-primary-shadow);
+}
+.task-actions { 
+    margin-top: 0.625rem; 
+    display: flex; 
+    gap: 5px; 
+    justify-content: flex-end; 
+}
+.task-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 0.625rem; 
+}
+.task-cat { 
+    background: var(--bg-secondary); 
+    padding: 0.25rem 0.5rem; 
+    border-radius: 0.75rem; 
+    color: var(--text-categ);
+}
+
+
+/* 3 COLONNES DES TACHES */
+
+.kanban-board { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1.25rem; 
+    margin-top: 2rem; 
+}
+.column { 
+    padding: 1rem; 
+    border-radius: 0.5rem; 
+    border: 1px solid var(--column-border);
+    backdrop-filter: blur(1rem);
+    background-color: var(--bg-glass);
+    box-shadow: var(--card-shadow-light);
+}
+.column h3 { 
+    text-align: center; 
+    padding-bottom: 10px; 
+    margin-bottom: 15px; 
+}
+/* SECTION CORBEILLE */
+.layout-trash {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-glass);
+    border-radius: 1rem;
+    border: solid 1px var(--column-border)
+
+}
+.header-trash {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 1.25rem; 
+    padding-bottom: 0.625rem;
+    backdrop-filter: blur(1rem);
+}
+.info-deleted {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* RESPONSIVE (grid en une colonne) */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+}
