@@ -2,8 +2,8 @@
 // Connexion à la DB 
 $host = 'localhost';
 $db   = 'gestion_taches_perso'; 
-$user = 'taches_user';
-$pass = 'L3s3eJNddTBCL!Xa'; 
+$user = 'root';
+$pass = ''; 
 
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 $options = [
